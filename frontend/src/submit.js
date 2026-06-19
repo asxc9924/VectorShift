@@ -12,7 +12,7 @@ export const SubmitButton = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/pipelines/parse', {
+      const res = await fetch('https://your-backend.railway.app/pipelines/parse', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nodes, edges }),
